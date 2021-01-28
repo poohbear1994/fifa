@@ -1,0 +1,28 @@
+.overflow-hidden{
+    overflow: hidden;
+}
+.overflow-auto{
+    overflow: auto;
+}
+.overflow-x-auto{
+    overflow-x: auto;
+}
+.overflow-x-scroll{
+    overflow-x: scroll;
+}
+*::-webkit-scrollbar {
+    display: none;
+}
+.global-background-img{
+    background-image: url(../src/assets/background.jpg);
+    background-attachment: fixed;
+}
+.min-height-1000{
+    min-height: 1080px;
+}
+p{
+text-indent: 2em;
+}
+.ljx-bg{
+background-color: rgba(14, 6, 6, 0.8);
+}

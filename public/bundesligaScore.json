@@ -1,0 +1,248 @@
+{
+    "code": 0,
+    "msg": "string",
+    "data": {
+        "count": 0,
+        "currentPage": 0,
+        "table": {
+            "title":"积分",
+            "header":["#","球队","胜","平","负","积分"],
+            "teams": [
+                {
+                    "id": "bundesliga_bairen",
+                    "name": "拜仁慕尼黑",
+                    "victory": "7",
+                    "dogfall": "2",
+                    "failure": "1",
+                    "score": "23",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_laibixi",
+                    "name": "莱比锡红牛",
+                    "victory": "6",
+                    "dogfall": "3",
+                    "failure": "1",
+                    "score": "21",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_duotemengde",
+                    "name": "多特蒙德",
+                    "victory": "6",
+                    "dogfall": "1",
+                    "failure": "3",
+                    "score": "19",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_lewokusen",
+                    "name": "勒沃库森",
+                    "victory": "5",
+                    "dogfall": "4",
+                    "failure": "0",
+                    "score": "19",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_woerfusibao",
+                    "name": "沃尔夫斯堡",
+                    "victory": "4",
+                    "dogfall": "6",
+                    "failure": "0",
+                    "score": "18",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_bolinlian",
+                    "name": "柏林联",
+                    "victory": "4",
+                    "dogfall": "4",
+                    "failure": "2",
+                    "score": "16",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_menxindelagebahe",
+                    "name": "门兴德拉格巴赫",
+                    "victory": "4",
+                    "dogfall": "4",
+                    "failure": "2",
+                    "score": "16",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_falankefu",
+                    "name": "法兰克福",
+                    "victory": "2",
+                    "dogfall": "7",
+                    "failure": "1",
+                    "score": "13",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_aogesibao",
+                    "name": "奥格斯堡",
+                    "victory": "3",
+                    "dogfall": "3",
+                    "failure": "3",
+                    "score": "12",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_situjiate",
+                    "name": "斯特加特",
+                    "victory": "2",
+                    "dogfall": "5",
+                    "failure": "2",
+                    "score": "11",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_bolinheta",
+                    "name": "柏林赫塔",
+                    "victory": "3",
+                    "dogfall": "2",
+                    "failure": "5",
+                    "score": "11",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_bulaimei",
+                    "name": "云达不莱梅",
+                    "victory": "2",
+                    "dogfall": "5",
+                    "failure": "2",
+                    "score": "11",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_huofenhaimu",
+                    "name": "霍芬海姆",
+                    "victory": "2",
+                    "dogfall": "3",
+                    "failure": "4",
+                    "score": "9",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_fulaibao",
+                    "name": "弗莱堡",
+                    "victory": "1",
+                    "dogfall": "5",
+                    "failure": "4",
+                    "score": "8",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_kelong",
+                    "name": "科隆",
+                    "victory": "1",
+                    "dogfall": "4",
+                    "failure": "5",
+                    "score": "7",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_bilefeierde",
+                    "name": "比勒菲尔德",
+                    "victory": "2",
+                    "dogfall": "1",
+                    "failure": "7",
+                    "score": "7",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_meiyinci",
+                    "name": "美因茨",
+                    "victory": "1",
+                    "dogfall": "2",
+                    "failure": "7",
+                    "score": "5",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                },
+                {
+                    "id": "bundesliga_shaerke04",
+                    "name": "沙尔克04",
+                    "victory": "0",
+                    "dogfall": "3",
+                    "failure": "6",
+                    "score": "3",
+                    "avatar": {
+                        "_id": "string",
+                        "url": "string",
+                        "createdAt": "2020-12-02T05:59:35.575Z"
+                    }
+                }
+            ]
+        }
+    }
+}
