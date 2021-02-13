@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-10 13:56:41
- * @LastEditTime: 2021-01-05 21:08:01
+ * @LastEditTime: 2021-02-12 17:34:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \football\src\views\TeamDetail.vue
 -->
 <template>
-  <div class="mx-auto w-50">
+  <div class="mx-auto col-12 col-sm-6 px-0">
     <div class="btn-group w-100" role="group" aria-label="Basic example" :ref="'btns'">
       <button type="button" class="btn btn-secondary"
         :class=" 'team' === activeTabName ? 'active' : '' "
@@ -294,5 +294,8 @@ export default defineComponent({
     color: white;
     text-align: center;
     border: none;
+  }
+  th,td {
+    overflow-x: scroll;
   }
 </style>

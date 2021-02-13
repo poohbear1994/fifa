@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-06 13:11:36
- * @LastEditTime: 2020-12-27 16:14:15
+ * @LastEditTime: 2021-02-12 11:12:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \football\src\views\signup.vue
 -->
 <template>
-  <div class="mx-auto p-3 w-25 text-white ljx-bg mt-5">
+  <div class="mx-auto p-3 col-11 col-md-4 text-white ljx-bg mt-5">
     <h5 class="my-4 text-center">注册你的FIFA账号</h5>
     <validate-form @form-submit="submitHandle">
       <div class="form-group mb-3">

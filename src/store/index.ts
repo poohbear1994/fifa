@@ -1,12 +1,12 @@
 /*
  * @Author: your name
  * @Date: 2020-12-01 17:26:38
- * @LastEditTime: 2021-01-05 22:17:26
+ * @LastEditTime: 2021-02-14 02:31:14
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \football\src\store\index.ts
  */
-import { createStore, Commit} from 'vuex'
+import { createStore, Commit } from 'vuex'
 import axios, { AxiosRequestConfig, AxiosResponse } from 'axios'
 import { GlobalStore, GameProp } from '../GlobalTypes'
 
@@ -15,13 +15,13 @@ import { GlobalStore, GameProp } from '../GlobalTypes'
  * @param {*} async
  * @return {*}
  */
-const asyncAndCommit = async (url: string, mumtationName: string, commit:Commit, config: AxiosRequestConfig = { method: 'get' }, extraData?: any ) => {
-  const response: AxiosResponse = await axios(url, config, )
+const asyncAndCommit = async (url: string, mumtationName: string, commit: Commit, config: AxiosRequestConfig = { method: 'get' }, extraData?: any) => {
+  const response: AxiosResponse = await axios(url, config)
   // 如果有额外数据
   if (extraData) {
-    commit(mumtationName, {response, extraData})
+    commit(mumtationName, { response, extraData })
   } else {
-    commit( mumtationName, response )
+    commit(mumtationName, response)
   }
   return response
 }
@@ -31,10 +31,10 @@ const asyncAndCommit = async (url: string, mumtationName: string, commit:Commit,
  * @param {*}
  * @return {*}
  */
-const postIdArrToObj =<T extends { postid: string }>(arr: Array<T>) => {
+const postIdArrToObj = <T extends { postid: string }>(arr: Array<T>) => {
   const obj = {}
   for (let i = 0; i < arr.length; i++) {
-      obj[arr[i].postid] = arr[i]
+    obj[arr[i].postid] = arr[i]
   }
   return obj
 }
@@ -44,10 +44,10 @@ const postIdArrToObj =<T extends { postid: string }>(arr: Array<T>) => {
  * @param {*}
  * @return {*}
  */
-const teamIdArrToObj =<T extends { teamid: string }>(arr: Array<T>) => {
+const teamIdArrToObj = <T extends { teamid: string }>(arr: Array<T>) => {
   const obj = {}
   for (let i = 0; i < arr.length; i++) {
-      obj[arr[i].teamid] = arr[i]
+    obj[arr[i].teamid] = arr[i]
   }
   return obj
 }
@@ -57,10 +57,10 @@ const teamIdArrToObj =<T extends { teamid: string }>(arr: Array<T>) => {
  * @param {*}
  * @return {*}
  */
-const playerIdArrToObj =<T extends { playerid: string }>(arr: Array<T>) => {
+const playerIdArrToObj = <T extends { playerid: string }>(arr: Array<T>) => {
   const obj = {}
   for (let i = 0; i < arr.length; i++) {
-      obj[arr[i].playerid] = arr[i]
+    obj[arr[i].playerid] = arr[i]
   }
   return obj
 }
@@ -70,68 +70,67 @@ const playerIdArrToObj =<T extends { playerid: string }>(arr: Array<T>) => {
  * @param {*}
  * @return {*}
  */
-const gameDateArrToObj =<T extends { date: string }>(arr: Array<T>) => {
+const gameDateArrToObj = <T extends { date: string }>(arr: Array<T>) => {
   const obj = {}
   for (let i = 0; i < arr.length; i++) {
-      obj[arr[i].date] = arr[i]
+    obj[arr[i].date] = arr[i]
   }
   return obj
 }
 
 // 获取联赛id
-const getleagueId = (response:any) => {
+const getleagueId = (response: any) => {
   return response.config.url.split('?')[1].split('=')[1]
 }
 
 // store
 export default createStore<GlobalStore>({
   state: {
-    teams:{
-      data:{}
+    teams: {
+      data: {}
     },
-    score:{
-      dejia:{ data:{}, isLoaded:false },
-      xijia:{ data:{}, isLoaded:false },
-      yingchao:{ data:{}, isLoaded:false },
-      fajia:{ data:{}, isLoaded:false },
-      yijia:{ data:{}, isLoaded:false }
+    score: {
+      dejia: { data: {}, isLoaded: false },
+      xijia: { data: {}, isLoaded: false },
+      yingchao: { data: {}, isLoaded: false },
+      fajia: { data: {}, isLoaded: false },
+      yijia: { data: {}, isLoaded: false }
     },
-    news:{
-      dejia:{ data:{}, currentPage:0 },
-      xijia:{ data:{}, currentPage:0 },
-      yingchao:{ data:{}, currentPage:0 },
-      fajia:{ data:{}, currentPage:0 },
-      yijia:{ data:{}, currentPage:0 }
+    news: {
+      dejia: { data: {}, currentPage: 0 },
+      xijia: { data: {}, currentPage: 0 },
+      yingchao: { data: {}, currentPage: 0 },
+      fajia: { data: {}, currentPage: 0 },
+      yijia: { data: {}, currentPage: 0 }
     },
-    tops:{
-      dejia:{ data:{}, isLoaded:false },
-      xijia:{ data:{}, isLoaded:false },
-      yingchao:{ data:{}, isLoaded:false },
-      fajia:{ data:{}, isLoaded:false },
-      yijia:{ data:{}, isLoaded:false }
+    tops: {
+      dejia: { data: {}, isLoaded: false },
+      xijia: { data: {}, isLoaded: false },
+      yingchao: { data: {}, isLoaded: false },
+      fajia: { data: {}, isLoaded: false },
+      yijia: { data: {}, isLoaded: false }
     },
-    post:{ data:{}},
-    player:{ 
-      dejia:{ data:{}, loaded:[] },
-      xijia:{ data:{}, loaded:[] },
-      yingchao:{ data:{}, loaded:[] },
-      fajia:{ data:{}, loaded:[] },
-      yijia:{ data:{}, loaded:[] }
+    post: { data: {} },
+    player: {
+      dejia: { data: {}, loaded: [] },
+      xijia: { data: {}, loaded: [] },
+      yingchao: { data: {}, loaded: [] },
+      fajia: { data: {}, loaded: [] },
+      yijia: { data: {}, loaded: [] }
     },
-    games:{},
-    user:{
-      isLogin:false
+    games: {},
+    user: {
+      isLogin: false
     }
   },
   mutations: {
-    
     /**
      * @description: 接收联赛积分
      * @param {*} state
      * @param {*} response
      * @return {*}
      */
-    fetchLeagueScore(state,response) {
+    fetchLeagueScore (state, response) {
       // 获取联赛id
       const leagueId = getleagueId(response)
       state.score[leagueId].data = response.data.data
@@ -145,11 +144,11 @@ export default createStore<GlobalStore>({
      * @param {*} response
      * @return {*}
      */
-    fetchLeagueTops(state,response) {
+    fetchLeagueTops (state, response) {
       const topsObj = postIdArrToObj(response.data.data)
       // 获取联赛id
       const leagueId = getleagueId(response)
-      state.tops[leagueId].data = {...state.tops[leagueId].data, ...topsObj}
+      state.tops[leagueId].data = { ...state.tops[leagueId].data, ...topsObj }
       state.tops[leagueId].isLoaded = true
     },
 
@@ -159,14 +158,14 @@ export default createStore<GlobalStore>({
      * @param {*} response
      * @return {*}
      */
-    fetchLeagueNews(state,response) {
+    fetchLeagueNews (state, response) {
       const newsObj = postIdArrToObj(response.data.data)
       // 获取联赛id
       const leagueId = response.config.url.split('?')[1].split('&')[0].split('=')[1]
       console.log(leagueId)
-      state.news[leagueId].data = {...state.news[leagueId].data, ...newsObj}
+      state.news[leagueId].data = { ...state.news[leagueId].data, ...newsObj }
       if (response.data.data.length > 0) {
-        state.news[leagueId].currentPage ++
+        state.news[leagueId].currentPage++
       }
     },
 
@@ -176,9 +175,9 @@ export default createStore<GlobalStore>({
      * @param {*} response
      * @return {*}
      */
-    fetchPost(state,response) {
+    fetchPost (state, response) {
       const postObj = postIdArrToObj(response.data.data)
-      state.post.data = {...state.post.data, ...postObj}
+      state.post.data = { ...state.post.data, ...postObj }
     },
 
     /**
@@ -187,9 +186,9 @@ export default createStore<GlobalStore>({
      * @param {*} response
      * @return {*}
      */
-    fetchTeam(state,response) {
+    fetchTeam (state, response) {
       const teamObj = teamIdArrToObj(response.data.data)
-      state.teams.data = {...state.teams.data, ...teamObj}
+      state.teams.data = { ...state.teams.data, ...teamObj }
     },
 
     /**
@@ -198,11 +197,11 @@ export default createStore<GlobalStore>({
      * @param {*} response
      * @return {*}
      */
-    fetchPlayerOfTeam(state,response) {
+    fetchPlayerOfTeam (state, response) {
       const teamId: string = response.config.url.split('?')[1].split('=')[1]
       const leagueId: string = teamId.split('_')[0]
       const playerObj = playerIdArrToObj(response.data.data)
-      state.player[leagueId].data = {...state.player[leagueId].data, ...playerObj}
+      state.player[leagueId].data = { ...state.player[leagueId].data, ...playerObj }
       state.player[leagueId].loaded.push(teamId)
       console.log(state.player[leagueId])
     },
@@ -212,10 +211,10 @@ export default createStore<GlobalStore>({
      * @param {*}
      * @return {*}
      */
-    fetchOuguanDataOfTeam(state, response) {
+    fetchOuguanDataOfTeam (state, response) {
       const teamId = response.config.url.split('?')[1].split('=')[1]
       const ouguanData = response.data.data[0]
-      state.teams.data[teamId] = {...state.teams.data[teamId], ouguanData: ouguanData}
+      state.teams.data[teamId] = { ...state.teams.data[teamId], ouguanData: ouguanData }
       // console.log(state.teams.data[teamId])
     },
 
@@ -225,11 +224,11 @@ export default createStore<GlobalStore>({
      * @param {*} response
      * @return {*}
      */
-    fetchTeamSchdule(state, {response, extraData}) {
+    fetchTeamSchdule (state, { response, extraData }) {
       const data = response.data.data
       // 获取查询的年月
       const queryYear = extraData.queryDate.split('-')[0]
-      const queryMonth = +extraData.queryDate.split('-')[1]+''
+      const queryMonth = +extraData.queryDate.split('-')[1] + ''
       console.log(queryMonth)
       // 获取teamId
       const teamId = extraData.teamId
@@ -250,9 +249,9 @@ export default createStore<GlobalStore>({
         item.date = `${year}-${month}-${day}`
       })
       // 赛程数据打平为对象
-      const scheduleData =  gameDateArrToObj(data)
+      const scheduleData = gameDateArrToObj(data)
       // 数据添加到state中
-      state.games[queryYear][queryMonth][teamId] = { ...state.games[queryYear][queryMonth][teamId], ...scheduleData}
+      state.games[queryYear][queryMonth][teamId] = { ...state.games[queryYear][queryMonth][teamId], ...scheduleData }
       console.log(state.games)
     },
 
@@ -261,19 +260,19 @@ export default createStore<GlobalStore>({
      * @param {*}
      * @return {*}
      */
-    updatePlayer(state, response) {
+    updatePlayer (state, response) {
       const playerData = response.data.data[0]
       const league = playerData.leagueid
       const playerId = playerData.playerid
       state.player[league][playerId] = playerData
-    },    
+    },
 
     /**
      * @description: 退出登录
      * @param {*} state
      * @return {*}
      */
-    logout(state) {
+    logout (state) {
       state.user.isLogin = false
     },
 
@@ -283,7 +282,7 @@ export default createStore<GlobalStore>({
      * @param {*} rawData
      * @return {*}
      */
-    login(state, response){
+    login (state, response) {
       console.log(response)
       if (response.data.data.nickname) {
         state.user.isLogin = true
@@ -295,7 +294,7 @@ export default createStore<GlobalStore>({
      * @param {*}
      * @return {*}
      */
-    setLoading(state,status){
+    setLoading (state, status) {
       state.loading = status
     }
   },
@@ -304,10 +303,10 @@ export default createStore<GlobalStore>({
      * @description: 请求登录
      * @param {*}
      * @return {*}
-     */    
-    requestLogin({ commit, state }, postData) {
+     */
+    requestLogin ({ commit, state }, postData) {
       if (!state.user.isLogin) {
-        return asyncAndCommit(`/api/login`, 'login', commit, { method: 'post', data: postData})
+        return asyncAndCommit('/api/login', 'login', commit, { method: 'post', data: postData })
       }
     },
 
@@ -316,7 +315,7 @@ export default createStore<GlobalStore>({
      * @param {string} leagueId 联赛id
      * @return {*}
      */
-    requestLeagueScore({ commit, state }, leagueId) {
+    requestLeagueScore ({ commit, state }, leagueId) {
       if (!state.score[leagueId].isLoaded) {
         return asyncAndCommit(`/api/league/score?leagueId=${leagueId}`, 'fetchLeagueScore', commit)
       }
@@ -328,7 +327,7 @@ export default createStore<GlobalStore>({
      * @param {*} leagueId
      * @return {*}
      */
-    requestLeagueTops({ commit, state }, leagueId) {
+    requestLeagueTops ({ commit, state }, leagueId) {
       if (!state.tops[leagueId].isLoaded) {
         return asyncAndCommit(`/api/league/toplist?leagueId=${leagueId}`, 'fetchLeagueTops', commit)
       }
@@ -340,7 +339,7 @@ export default createStore<GlobalStore>({
      * @param {string} page 请求页数
      * @return {*}
      */
-    requestLeagueNews({ commit, state }, {leagueId, page}) {
+    requestLeagueNews ({ commit, state }, { leagueId, page }) {
       console.log(leagueId)
       if (page > state.news[leagueId].currentPage) {
         return asyncAndCommit(`/api/league/newList?leagueId=${leagueId}&page=${page}`, 'fetchLeagueNews', commit)
@@ -353,7 +352,7 @@ export default createStore<GlobalStore>({
      * @param {*} postId 文章id
      * @return {*}
      */
-    requestNewsDetail({ commit, state }, postId) {
+    requestNewsDetail ({ commit, state }, postId) {
       if (!state.post.data[postId]) {
         return asyncAndCommit(`/api/post?postId=${postId}`, 'fetchPost', commit)
       }
@@ -365,7 +364,7 @@ export default createStore<GlobalStore>({
      * @param {*} teamId
      * @return {*}
      */
-    requestTeam({ commit, state}, teamId) {
+    requestTeam ({ commit, state }, teamId) {
       if (!state.teams.data[teamId]) {
         return asyncAndCommit(`/api/team?teamId=${teamId}`, 'fetchTeam', commit)
       }
@@ -376,7 +375,7 @@ export default createStore<GlobalStore>({
      * @param {*}
      * @return {*}
      */
-    requestPlayerOfTeam({ commit, state }, teamId) {
+    requestPlayerOfTeam ({ commit, state }, teamId) {
       const leagueId: string = teamId.split('_')[0]
       const loadedArr: number[] = state.player[leagueId].loaded
       if (loadedArr.indexOf(teamId) < 0) {
@@ -389,7 +388,7 @@ export default createStore<GlobalStore>({
      * @param {*}
      * @return {*}
      */
-    requestOuguanDataOfTeam({ commit, state }, teamId) {
+    requestOuguanDataOfTeam ({ commit, state }, teamId) {
       const teamData = state.teams.data[teamId]
       if (!teamData) {
         return asyncAndCommit(`/api/teamDataOfOuguan?teamId=${teamId}`, 'fetchOuguanDataOfTeam', commit)
@@ -402,10 +401,10 @@ export default createStore<GlobalStore>({
      * @param {*} param2
      * @return {*}
      */
-    requestTeamSchdule( { commit, state }, {teamId, queryDate}) {
+    requestTeamSchdule ({ commit, state }, { teamId, queryDate }) {
       const m = +queryDate.split('-')[1]
       const y = +queryDate.split('-')[0]
-      console.log(m,y)
+      console.log(m, y)
       if (state.games[y]) {
         if (state.games[y][m]) {
           if (state.games[y][m][teamId]) {
@@ -414,22 +413,22 @@ export default createStore<GlobalStore>({
         }
       }
       return asyncAndCommit(`/api/teamSchedule?teamId=${teamId}&queryDate=${queryDate}`,
-      'fetchTeamSchdule',
-      commit,
-      { method: 'get' },
-      {
-        teamId,
-        queryDate
-      })
+        'fetchTeamSchdule',
+        commit,
+        { method: 'get' },
+        {
+          teamId,
+          queryDate
+        })
     },
-    
+
     /**
      * @description: 请求升级球员数据
      * @param {*}
      * @return {*}
      */
-    requestUpdatePlayer({ commit, state}, postData) {
-      return asyncAndCommit(`/api/updatePlayer`, 'updatePlayer', commit, { method: 'post', data: postData})
+    requestUpdatePlayer ({ commit, state }, postData) {
+      return asyncAndCommit('/api/updatePlayer', 'updatePlayer', commit, { method: 'post', data: postData })
     }
   },
   getters: {

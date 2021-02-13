@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-21 13:26:07
- * @LastEditTime: 2021-01-04 21:50:49
+ * @LastEditTime: 2021-02-11 16:51:10
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \fifa\football\src\views\Post.vue
@@ -42,5 +42,8 @@ export default defineComponent({
   }
   .f_center{
     text-align: center;
+  }
+  img{
+    max-width: 90%;
   }
 </style>

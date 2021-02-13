@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-01 20:53:38
- * @LastEditTime: 2020-12-26 13:18:50
+ * @LastEditTime: 2021-02-14 01:41:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \football\src\components\GlobaRaking.vue

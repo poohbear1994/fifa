@@ -1,13 +1,13 @@
 /*
  * @Author: your name
  * @Date: 2020-12-01 17:26:38
- * @LastEditTime: 2020-12-28 12:48:24
+ * @LastEditTime: 2021-02-05 03:37:16
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \football\src\main.ts
  */
 import { createApp } from 'vue'
-import Vue from 'vue'
+// import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'

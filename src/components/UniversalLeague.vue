@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-02 12:22:59
- * @LastEditTime: 2021-01-02 19:03:53
+ * @LastEditTime: 2021-02-14 01:55:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \football\src\components\Universal.vue
 -->
 <template>
-  <div class="bg-transparent container-xl">
+  <div class="bg-transparent container-xl px-0 overflow-hidden">
     <div style="height: 1px"></div>
     <gloabl-layout class="mt-3">
         <template #sidebar>
@@ -83,5 +83,10 @@ export default defineComponent({
   .load-more:hover{
     cursor: pointer;
     background-color: rgba(223, 226, 211, 0.8)!important
+  }
+  @media screen and (max-width:576px) {
+    .nav-bar{
+      padding: auto 0;
+    }
   }
 </style>

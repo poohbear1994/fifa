@@ -1,13 +1,13 @@
 <!--
  * @Author: your name
  * @Date: 2020-12-05 17:00:54
- * @LastEditTime: 2020-12-27 16:45:33
+ * @LastEditTime: 2021-02-14 01:31:24
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \football\src\views\Login.vue
 -->
 <template>
-  <div class="mx-auto p-3 w-25 text-white mt-5 ljx-bg">
+  <div class="mx-auto p-3 col-11 col-md-4 text-white mt-5 ljx-bg">
     <h5 class="my-4 text-center">登录到FIFA</h5>
     <validate-form @form-submit="submitHandle">
       <div class="form-group mb-3">
@@ -24,6 +24,9 @@
         <button type="submit" class="btn btn-primary w-100">登录</button>
       </template>
     </validate-form>
+    <div class="mt-3 text-center">
+      <router-link to="/signup">未注册？跳转到注册页</router-link>
+    </div>
   </div>
 </template>
 <script lang="ts">
